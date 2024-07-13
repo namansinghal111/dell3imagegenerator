@@ -81,7 +81,7 @@ const corsOptions = {
  //  origin: 'https://aiimagegeneratorpro.netlify.app',
   //origin: process.env.CORSUR
   //credentials: true,*/
-    origin: 'https://geminicontentgenerator.netlify.app',
+    origin: 'https://aiimagegeneratorpro.netlify.app',
     methods: 'GET,POST,OPTIONS',
     allowedHeaders: 'Origin,Content-Type,Accept',
     optionsSuccessStatus: 204
