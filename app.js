@@ -62,15 +62,17 @@ app.use(express.json());
 const corsOptions = {
   headers: {
     //"Access-Control-Allow-Origin": "http://localhost:8000/",
+    origin: "https://aiimagegeneratorpro.netlify.app",
     "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
     withCredentials: true,
     "Access-Control-Allow-Headers":
       "Origin, Accept, X-Requested-With, Content-Type",
     Accept: "application/json",
     "Content-Type": "application/json",
+    
   },
  // origin: process.env.CORSURL,
-  origin: "https://aiimagegeneratorpro.netlify.app",
+  
   //origin: process.env.CORSUR
   //credentials: true,
 };
