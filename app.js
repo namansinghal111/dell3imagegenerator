@@ -42,6 +42,7 @@ config({
 });
 
 //! Cors
+/*
 app.use((req, res, next) => {
   //res.header("Access-Control-Allow-Origin", req.headers.origin);
   res.header("Access-Control-Allow-Origin", 'https://aiimagegeneratorpro.netlify.app');
@@ -52,6 +53,7 @@ app.use((req, res, next) => {
   );
   next();
 });
+*/
 
 /*
 const corsOptions = {
@@ -62,7 +64,7 @@ const corsOptions = {
 app.use(express.json());
 const corsOptions = {
   headers: {
-    "Access-Control-Allow-Origin": "https://aiimagegeneratorpro.netlify.app",   
+    /*"Access-Control-Allow-Origin": "https://aiimagegeneratorpro.netlify.app",   
     //optionsSuccessStatus: 200 // Some legacy browsers choke on 204
     
    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
@@ -72,13 +74,21 @@ const corsOptions = {
   Accept: "application/json",
    "Content-Type": "application/json",
     
+    
   },
  // origin: process.env.CORSURL,
  //  origin: 'https://aiimagegeneratorpro.netlify.app',
   //origin: process.env.CORSUR
-  //credentials: true,
+  //credentials: true,*/
+    origin: 'https://geminicontentgenerator.netlify.app',
+    methods: 'GET,POST,OPTIONS',
+    allowedHeaders: 'Origin,Content-Type,Accept',
+    optionsSuccessStatus: 204
+    
 };
-app.use('*', cors(corsOptions));
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // handle preflight requests
 
 //!Route
 app.post("/generate-image", async (req, res) => {
