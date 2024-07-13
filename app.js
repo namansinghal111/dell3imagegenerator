@@ -63,8 +63,9 @@ const corsOptions = {
 //!Middlewares
 app.use(express.json());
 const corsOptions = {
+  /*
   headers: {
-    /*"Access-Control-Allow-Origin": "https://aiimagegeneratorpro.netlify.app",   
+    "Access-Control-Allow-Origin": "https://aiimagegeneratorpro.netlify.app",   
     //optionsSuccessStatus: 200 // Some legacy browsers choke on 204
     
    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
