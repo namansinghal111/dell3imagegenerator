@@ -42,9 +42,9 @@ config({
 });
 
 //! Cors
-/*
+
 app.use((req, res, next) => {
-  //res.header("Access-Control-Allow-Origin", req.headers.origin);
+ // res.header("Access-Control-Allow-Origin", req.headers.origin);
   res.header("Access-Control-Allow-Origin", 'https://aiimagegeneratorpro.netlify.app');
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
@@ -53,7 +53,7 @@ app.use((req, res, next) => {
   );
   next();
 });
-*/
+
 
 /*
 const corsOptions = {
@@ -63,7 +63,7 @@ const corsOptions = {
 //!Middlewares
 app.use(express.json());
 const corsOptions = {
-  /*
+  
   headers: {
     "Access-Control-Allow-Origin": "https://aiimagegeneratorpro.netlify.app",   
     //optionsSuccessStatus: 200 // Some legacy browsers choke on 204
