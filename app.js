@@ -69,7 +69,8 @@ const corsOptions = {
     Accept: "application/json",
     "Content-Type": "application/json",
   },
-  origin: process.env.CORSURL,
+ // origin: process.env.CORSURL,
+  origin: "https://aiimagegeneratorpro.netlify.app",
   //origin: process.env.CORSUR
   //credentials: true,
 };
