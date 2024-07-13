@@ -62,24 +62,23 @@ const corsOptions = {
 app.use(express.json());
 const corsOptions = {
   headers: {
-    //"Access-Control-Allow-Origin": "http://localhost:8000/",
-    origin: 'https://aiimagegeneratorpro.netlify.app',
-    optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+    //"Access-Control-Allow-Origin": "http://localhost:8000/",   
+    //optionsSuccessStatus: 200 // Some legacy browsers choke on 204
     
-   // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-   // withCredentials: true,
-    //"Access-Control-Allow-Headers":
-    //  "Origin, Accept, X-Requested-With, Content-Type",
-  //  Accept: "application/json",
-   // "Content-Type": "application/json",
+   "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+   withCredentials: true,
+    "Access-Control-Allow-Headers":
+    "Origin, Accept, X-Requested-With, Content-Type",
+  Accept: "application/json",
+   "Content-Type": "application/json",
     
   },
  // origin: process.env.CORSURL,
-  
+   origin: 'https://aiimagegeneratorpro.netlify.app',
   //origin: process.env.CORSUR
   //credentials: true,
 };
-app.use(cors(corsOptions));
+app.use('*', cors(corsOptions));
 
 //!Route
 app.post("/generate-image", async (req, res) => {
